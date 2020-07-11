@@ -76,7 +76,12 @@ app.post('/', upload.any(), function(req,res){
       var detail = new Detail({
 
         unique_id:c,
-        Name: req.body.title,
+        first_name: req.body.first_name,
+        last_name:  req.body.last_name,
+        email:      req.body.email,
+        phone:      req.body.phone,
+        country:    req.body.country,
+        state:      req.body.state,
         image1: req.files[0] && req.files[0].filename ? req.files[0].filename : '',
         image2: req.files[1] && req.files[1].filename ? req.files[1].filename : '',
       });

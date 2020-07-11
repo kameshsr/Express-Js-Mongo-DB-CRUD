@@ -3,7 +3,12 @@ var Schema = mongoose.Schema;
 
 detailSchema = new Schema( {
 	unique_id:Number,
-	Name: String,
+	first_name:String,
+    last_name: String,
+    email: String,
+    phone: Number,
+    country:String,
+    state:String,
 	image1:String,
 	image2:String,
 	image3:String,
@@ -11,6 +16,7 @@ detailSchema = new Schema( {
 		type: Date,
 		default: Date.now
 	}
+
 }),
 Detail = mongoose.model('Detail', detailSchema);
 
